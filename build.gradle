@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.codehaus.groovy:groovy'
 	implementation 'org.codehaus.groovy:groovy-all:2.5.8'
 	implementation "net.imagej:ij:1.53a"
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

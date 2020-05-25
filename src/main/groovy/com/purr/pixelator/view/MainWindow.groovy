@@ -1,13 +1,16 @@
 package com.purr.pixelator.view
 
+import groovy.util.logging.Slf4j
+
 import javax.swing.JFrame
 import java.awt.GridLayout
 import java.awt.HeadlessException
 
+@Slf4j
 class MainWindow extends JFrame {
 
     MainWindow() throws HeadlessException {
-        println("MEOW :: MainWindow Init")
+        log.trace("MEOW :: MainWindow Init")
 		setLayout(new GridLayout(2,1))
 		this.setTitle("Pixelator by Judit Tovissy @ tovissy.com")
 		setSize(500,525)
