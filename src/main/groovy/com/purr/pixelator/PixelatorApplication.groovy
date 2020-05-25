@@ -1,13 +1,22 @@
 package com.purr.pixelator
 
-import org.springframework.boot.SpringApplication
+import com.purr.pixelator.view.MainWindow
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.builder.SpringApplicationBuilder
+import org.springframework.context.ConfigurableApplicationContext
+
+import java.awt.EventQueue
 
 @SpringBootApplication
 class PixelatorApplication {
 
 	static void main(String[] args) {
-		SpringApplication.run(PixelatorApplication, args)
-	}
+		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(MainWindow)
+				.headless(false).run(args);
 
+		EventQueue.invokeLater({ ->
+			MainWindow mainWindow = ctx.getBean(MainWindow);
+			mainWindow.setVisible(true);
+		});
+	}
 }
