@@ -4,6 +4,8 @@ import com.purr.pixelator.model.PurrImage
 
 interface ImageDisplayer {
 
-    void displayImageInNewWindow(PurrImage)
+    void displayImageInNewWindow(PurrImage image)
+
+    void displayImageInNewWindow(String filepath)
 
 }

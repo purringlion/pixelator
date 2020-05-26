@@ -30,3 +30,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Purr ###
+/src/main/resources/assets/wip/Thumbs.db

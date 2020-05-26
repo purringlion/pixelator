@@ -4,8 +4,8 @@ import com.purr.pixelator.model.PurrImage
 import com.purr.pixelator.util.ClasspathResourceLoader
 import com.purr.pixelator.util.ClasspathResourceLoaderIMPL
 import com.purr.pixelator.util.ImageDisplayer
+import com.purr.pixelator.util.MyImageDisplayer
 import groovy.util.logging.Slf4j
-import ij.ImagePlus
 
 import javax.swing.JButton
 import javax.swing.JFrame
@@ -44,6 +44,7 @@ class MainWindow extends JFrame {
         log.trace("MEOW :: MainWindow Init")
 		//TODO Beanify & Autowire this
 		classpathResourceLoader = new ClasspathResourceLoaderIMPL()
+		imageDisplayer = new MyImageDisplayer()
 		setupWindow()
     }
 
@@ -66,10 +67,9 @@ class MainWindow extends JFrame {
 		showDemoImageButton.addActionListener(new ActionListener() {
 			@Override
 			void actionPerformed(ActionEvent actionEvent) {
-				try {
+				try { //todo better error handling
 					String resourcePath = classpathResourceLoader.getPathOfResource(demoImagePath)
-					ImagePlus img = new ImagePlus(resourcePath)
-					img.show()
+					imageDisplayer.displayImageInNewWindow(resourcePath)
 				}
 				catch (Exception e) {
 					e.printStackTrace()
