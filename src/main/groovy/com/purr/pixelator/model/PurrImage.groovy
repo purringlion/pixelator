@@ -10,4 +10,7 @@ class PurrImage {
         this.img = img
     }
 
+    BufferedImage getBufferedImage() {
+        return img
+    }
 }

@@ -6,6 +6,8 @@ import org.slf4j.IMarkerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.context.ConfigurableApplicationContext
+import org.springframework.context.annotation.ComponentScan
+
 import java.awt.EventQueue
 
 @Slf4j

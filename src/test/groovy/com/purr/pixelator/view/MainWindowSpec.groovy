@@ -1,5 +1,8 @@
 package com.purr.pixelator.view
 
+import com.purr.pixelator.util.ClasspathResourceLoaderIMPL
+import com.sun.jndi.toolkit.url.Uri
+import ij.ImagePlus
 import spock.lang.Ignore
 import spock.lang.Specification
 
@@ -45,8 +48,27 @@ class MainWindowSpec extends Specification {
             e.printStackTrace()
         }
 
-
         then:
         noExceptionThrown()
+    }
+
+    @Ignore //This was just hacking it together until it worked
+    def "show image"() {
+        try {
+            String demoImagePath = "assets/wip/catzilla.jpg"
+            ClasspathResourceLoaderIMPL loader = new ClasspathResourceLoaderIMPL()
+            String path = loader.getPathOfResource(demoImagePath)
+            ImagePlus img = new ImagePlus(path)
+            img.show()
+        }
+        catch (Exception e) {
+            println(e.class)
+            println(e.message)
+            println(e.cause)
+            e.properties.each {println(it)}
+        }
+
+        expect: true
+
     }
 }
