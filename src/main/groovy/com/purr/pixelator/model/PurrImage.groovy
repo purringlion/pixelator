@@ -2,7 +2,7 @@ package com.purr.pixelator.model
 
 import java.awt.image.BufferedImage
 
-class PurrImage {
+final class PurrImage {
 
     private BufferedImage img
 

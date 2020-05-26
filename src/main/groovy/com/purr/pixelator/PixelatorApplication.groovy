@@ -12,7 +12,7 @@ import java.awt.EventQueue
 
 @Slf4j
 @SpringBootApplication
-class PixelatorApplication {
+final class PixelatorApplication {
 
 	static void main(String[] args) {
 		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(MainWindow)

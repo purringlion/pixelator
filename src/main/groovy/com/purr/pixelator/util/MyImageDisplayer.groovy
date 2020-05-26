@@ -3,11 +3,7 @@ package com.purr.pixelator.util
 import com.purr.pixelator.model.PurrImage
 import ij.ImagePlus
 
-import java.awt.image.BufferedImage
-
-class MyImageDisplayer implements ImageDisplayer{
-
-    private ClasspathResourceLoader classpathResourceLoader
+final class MyImageDisplayer implements ImageDisplayer{
 
     @Override
     void displayImageInNewWindow(PurrImage image) {

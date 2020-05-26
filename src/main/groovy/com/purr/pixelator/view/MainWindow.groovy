@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent
 import java.awt.event.ActionListener
 
 @Slf4j
-class MainWindow extends JFrame {
+final class MainWindow extends JFrame {
 
 	//TODO get these from properties
 	/**

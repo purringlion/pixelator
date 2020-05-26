@@ -3,11 +3,11 @@ package com.purr.pixelator.model
 /**
  * This class uses a 32 bit XRGB representation
  */
-class RGBPixel {
+final class RGBPixel {
 
-    protected final static int BITMASK_RED = 16711680;   // 00000000111111110000000000000000
-    protected final static int BITMASK_GREEN = 65280;    // 00000000000000001111111100000000
-    protected final static int BITMASK_BLUE = 255;       // 00000000000000000000000011111111
+    private final static int BITMASK_RED = 16711680;   // 00000000111111110000000000000000
+    private final static int BITMASK_GREEN = 65280;    // 00000000000000001111111100000000
+    private final static int BITMASK_BLUE = 255;       // 00000000000000000000000011111111
 
     private int pixelValue
 

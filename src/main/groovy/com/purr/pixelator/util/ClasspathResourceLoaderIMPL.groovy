@@ -1,6 +1,6 @@
 package com.purr.pixelator.util
 
-class ClasspathResourceLoaderIMPL implements ClasspathResourceLoader {
+final class ClasspathResourceLoaderIMPL implements ClasspathResourceLoader {
 
     //TODO can/should this be static?
     @Override
