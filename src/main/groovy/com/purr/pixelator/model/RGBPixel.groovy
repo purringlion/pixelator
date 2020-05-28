@@ -9,6 +9,13 @@ final class RGBPixel {
     private final static int BITMASK_GREEN = 65280;    // 00000000000000001111111100000000
     private final static int BITMASK_BLUE = 255;       // 00000000000000000000000011111111
 
+    /**
+     * Marks the significant bits of an int;
+     * Used to discard the first 8 bits
+     * Because we only care about channels R,G,B
+     */
+    private final static int BITMASK_RGB = 16777215;   // 00000000111111111111111111111111
+
     private int pixelValue
 
     int getRed(){
@@ -36,7 +43,8 @@ final class RGBPixel {
     }
 
     RGBPixel(int pixelValue) {
-        this.pixelValue = pixelValue
+        /* Throw away the first 8 bits for consistency */
+        this.pixelValue = (pixelValue & BITMASK_RGB)
     }
 
     RGBPixel(int r, int g, int b) {

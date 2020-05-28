@@ -13,4 +13,8 @@ final class PurrImage {
     BufferedImage getBufferedImage() {
         return img
     }
+
+    RGBPixel getPixel(int x, int y) {
+        return img.getRGB(x,y)
+    }
 }

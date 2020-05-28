@@ -7,7 +7,7 @@ final class MyImageDisplayer implements ImageDisplayer{
 
     @Override
     void displayImageInNewWindow(PurrImage image) {
-        ImagePlus imageDisplay = new ImagePlus(image.getBufferedImage())
+        ImagePlus imageDisplay = new ImagePlus("",image.getBufferedImage())
         imageDisplay.show()
     }
 
